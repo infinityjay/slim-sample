@@ -3,6 +3,7 @@
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Slim\App;
+use App\Action\HomeAction;
 
 return function (App $app) {
 //    $app->get('/', function (ServerRequestInterface $request, ResponseInterface $response) {
@@ -10,6 +11,6 @@ return function (App $app) {
 //
 //        return $response;
 //    });
-    $app->get('/', \App\Action\HomeAction::class);
+    $app->get('/', HomeAction::class);
 
 };
